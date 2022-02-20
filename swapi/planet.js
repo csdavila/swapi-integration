@@ -1,6 +1,6 @@
-module.exports.get = async (event, context, callback) => {
-  const axios = require("axios");
+const axios = require("axios");
 
+module.exports.get = async (event, context, callback) => {
   axios
     .get(`https://swapi.py4e.com/api/planets/${event.pathParameters.id}`)
     .then(
